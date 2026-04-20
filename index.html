@@ -8,6 +8,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
 
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108683235', 'ym');
+    ym(108683235, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108683235" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 <script>
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "palette": "ink",
@@ -172,6 +185,11 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
     color: var(--fg);
   }
   .btn-ghost:hover { border-color: var(--fg); }
+  .btn-vk {
+    background: #0077ff;
+    color: #fff;
+  }
+  .btn-vk:hover { transform: translateY(-1px); }
   .btn .arr { transition: transform 0.2s; }
   .btn:hover .arr { transform: translate(3px, -3px); }
 
@@ -952,9 +970,14 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
       <a href="#about">О студии</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a href="https://t.me/alen_sc" target="_blank" class="btn btn-primary">
-      Написать <span class="arr">↗</span>
-    </a>
+    <div style="display:flex;gap:8px;">
+      <a href="https://t.me/alen_sc" target="_blank" class="btn btn-primary">
+        Telegram <span class="arr">↗</span>
+      </a>
+      <a href="https://vk.com/nn_chatbot" target="_blank" class="btn btn-vk">
+        ВКонтакте <span class="arr">↗</span>
+      </a>
+    </div>
   </div>
 </nav>
 
@@ -1380,15 +1403,14 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   <h2 class="big" style="margin-top: 28px;">Опишите<br/>задачу — <em>пришлю</em><br/>решение.</h2>
   <div class="cta-actions">
     <a href="https://t.me/alen_sc" target="_blank" class="btn btn-primary" style="padding: 18px 28px; font-size: 16px;">Написать в Telegram <span class="arr">↗</span></a>
-    <a href="#services" class="btn btn-ghost" style="padding: 18px 28px; font-size: 16px;">Смотреть услуги</a>
+    <a href="https://vk.com/nn_chatbot" target="_blank" class="btn btn-vk" style="padding: 18px 28px; font-size: 16px;">Написать ВКонтакте <span class="arr">↗</span></a>
   </div>
-  <p class="ps">@alen_sc · отвечаю за 12 минут · бесплатная консультация</p>
+  <p class="ps">t.me/alen_sc · vk.com/nn_chatbot · бесплатная консультация</p>
 </section>
 
 <footer>
   <div>© Ален Studio · 2021—2026</div>
-  <div>TG · VK · MAX</div>
-  <div>t.me/alen_sc</div>
+  <div><a href="https://t.me/alen_sc" target="_blank" style="opacity:.6;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.6">t.me/alen_sc</a> · <a href="https://vk.com/nn_chatbot" target="_blank" style="opacity:.6;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.6">vk.com/nn_chatbot</a></div>
 </footer>
 
 <!-- ========== TWEAKS PANEL ========== -->
